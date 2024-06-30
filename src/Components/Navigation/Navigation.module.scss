@@ -1,0 +1,125 @@
+.nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        @media(max-width:800px){
+            gap: 2px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        & > h2{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    &__middle{
+        display: flex;
+        list-style-type: none;
+        gap: 32px;
+        @media(max-width:800px){
+            gap: 10px;
+        }
+        @media(max-width: 560px ) {
+            display: none;
+        }
+        align-items: center;
+        & > li {
+            font-size: clamp(0.625rem, 0.074rem + 1.47vw, 1.25rem);
+            font-weight: 600;  
+            border-bottom: 3px solid white;
+        }
+        
+        &__active{
+            border-bottom: 3px solid black !important;
+        }
+        
+        & > a {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: black;
+            padding: 16px 20px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: clamp(0.625rem, 0.074rem + 1.47vw, 1.25rem);
+            font-weight: 600;
+            @media(max-width:800px){
+              padding: 8px 10px;
+            }
+            &:hover {
+             background-color: #404040;
+            }
+           }
+
+           
+
+        & > li:hover{
+            cursor: pointer;
+      
+        }
+
+ 
+
+    }
+
+    &__right{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        
+        @media(max-width:800px){
+            gap: 2px;
+        }
+        @media(max-width: 560px ) {
+            display: none;
+        }
+        & > svg{
+            font-size: clamp(1.875rem, 1.324rem + 1.47vw, 2.5rem);
+        }
+        // mui component
+        & > div{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            & > div {
+                width: 100%;
+                & > label{
+                    font-size: clamp(0.625rem, 0.239rem + 1.03vw, 1.063rem);
+                }
+                & > div {
+                    & > div {
+                        font-size: clamp(0.625rem, 0.239rem + 1.03vw, 1.063rem);
+                      
+                        @media(max-width:800px){
+                            padding: 10px 25px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__burger{
+        display: none;    
+        & > svg{
+            font-size: 40px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        @media(max-width: 560px ) {
+            display: block;
+        }
+    }
+}
+

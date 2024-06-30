@@ -1,0 +1,45 @@
+.exp{
+    color: white;
+    border: 1px solid #D4D4D8;
+    border-radius: 10px;
+    padding: 30px 24px;
+    transition: all 0.3s;
+    &:hover{
+        background-color: #27272A;
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media(max-width:560px){
+            align-items: start;
+            flex-direction: column;
+            gap: 30px;
+        }
+        & > div {
+            display: flex;
+            gap: 30px;
+            & > h3{
+                font-size: clamp(1.25rem, 1.029rem + 0.59vw, 1.5rem);
+                font-weight: 600;
+            }
+
+        }
+
+        & > p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #D4D4D8;
+        }
+
+    }
+
+    &__bottom{
+        color: #D4D4D8;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 28px;
+        text-indent: 30px;
+    }
+}

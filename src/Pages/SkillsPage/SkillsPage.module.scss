@@ -1,0 +1,49 @@
+.skill{
+    background-color: black;
+    margin-top: 30px;
+
+    &__cont{
+        & > h1 {
+            color: white;
+            text-align: center;
+            font-size: clamp(1.75rem, 0.647rem + 2.94vw, 3rem);
+            font-weight: 400;
+            & > span {
+                font-weight: 800;
+            }
+        }
+
+        &__expcont{
+
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+}
+
+.skills{
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+    &__cont{
+        & > h1 {
+            text-align: center;
+            font-weight: 400;
+            font-size: clamp(1.75rem, 0.647rem + 2.94vw, 3rem);
+            & > span{
+                font-weight: 800;
+            }
+        }
+
+        &__boxes{
+
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 8.566rem + 3.82vw, 11.625rem), 1fr));
+            gap: clamp(1.25rem, -1.229rem + 7.08vw, 4.438rem);
+        }
+    }
+
+}

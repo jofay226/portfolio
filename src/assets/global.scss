@@ -1,0 +1,64 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: Sora;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-Thin.ttf') ;
+    font-weight: 100;
+}
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-ExtraLight.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Sora ;
+    src: url('./fonts/static/Sora-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('./fonts//static/Sora-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-SemiBold.ttf') ;
+    font-weight: 600;
+}
+
+
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-ExtraBold.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/static/Sora-Regular.ttf');
+    font-weight: 400;
+}

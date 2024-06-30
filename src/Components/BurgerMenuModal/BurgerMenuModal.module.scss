@@ -1,0 +1,41 @@
+.burgermenu{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 95px;
+    height: 100vh;
+    background-color: #404040;
+    position: fixed;
+    padding: 16px;
+
+    &__lang{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        & > button{
+            padding: 10px 30px;
+            background-color: inherit;
+            border: 1px solid #404040;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .active{
+            border: 1px solid white;
+        }
+    }
+
+    &__pages{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        & > a {
+            font-size: 30px;
+            color: white;
+        }
+    }
+}
