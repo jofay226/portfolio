@@ -3,6 +3,7 @@
     margin-top: 30px;
     background-color: black;
     color: white;
+
     &__cont{
         & > h1 {
             text-align: center;
@@ -15,11 +16,11 @@
 
         &__procont{
             margin-top: clamp(1.25rem, -1.667rem + 8.33vw, 5rem) ;
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: clamp(1.875rem, -0.556rem + 6.94vw, 5rem);
-            // display: grid;
-            // grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             // gap: 20px;
         }
     }
@@ -48,7 +49,7 @@
         &__right{
             flex-grow: 1;
             flex-basis: 50%;
-          
+          overflow: hidden;
             display: flex;
             flex-direction: column;
             gap: 10px;

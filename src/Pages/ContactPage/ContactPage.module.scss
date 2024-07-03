@@ -1,0 +1,40 @@
+.contactpage{
+
+    margin-top: 30px;
+}
+
+.contact{
+
+    display: flex;
+    gap: clamp(1.875rem, 0.903rem + 2.78vw, 3.125rem);
+    @media(max-width:570px){
+        flex-direction: column;
+    }
+    &__right{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 20px;
+        @media(max-width:570px){
+            width: 100%;
+        }
+        & > h1 {
+            font-size: clamp(1.75rem, 0.778rem + 2.78vw, 3rem);
+            font-weight: 800;
+        }
+
+        & > p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #71717A;
+        }
+
+        & > h3{
+            font-size: clamp(1.25rem, 0.861rem + 1.11vw, 1.75rem);
+            font-weight: 700;
+        }
+    }
+}
+
+

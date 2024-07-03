@@ -1,5 +1,6 @@
 import Container from '../../Utils/Container/Container'
 import styles from './SkillsPage.module.scss';
+import {motion} from 'framer-motion'
 // mui icons
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
@@ -31,8 +32,8 @@ const mySkills = [
   {id:10, img: postman, name: 'PostMan'},
   {id:11, img: git, name: 'GIT'},
   {id:12, img: github, name: 'GitHub'},
-  {id:12, img: socket, name: 'Socket.io'},
-  {id:13, img: auth, name: 'Advanced Authorization'},
+  {id:13, img: socket, name: 'Socket.io'},
+  {id:14, img: auth, name: 'Advanced Authorization'},
 ]
 
 const SkillsPage = () => {
@@ -42,7 +43,7 @@ const SkillsPage = () => {
       <div className={styles.skill}>
         <Container>
           <div className={styles.skill__cont}>
-            <h1>{t("my")} <span>{t('exp')}</span> </h1>
+            <motion.h1 initial={{y: -100}} animate={{y: 0}}>{t("my")} <span>{t('exp')}</span> </motion.h1>
             <section className={styles.skill__cont__expcont}>
               {
                 prevJobs.map(job => (

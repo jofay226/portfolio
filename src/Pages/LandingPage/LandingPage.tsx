@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import { ElementType } from 'react';
 import { useTranslation } from 'react-i18next';
+import {motion} from 'framer-motion'
 const socials: {icon:ElementType, path: string}[] = [{icon:InstagramIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:LinkedInIcon, path:'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:FacebookIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:XIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}]
 
 const LandingPage = () => {
@@ -17,7 +18,7 @@ const LandingPage = () => {
         <div className={styles.landing__cont}>
             <div className={styles.landing__cont__left}>
               <div className={styles.landing__cont__left__h2}>
-                <h2>{t('greet')} <span>Jo Fay.</span></h2>
+                <motion.h2 initial={{x: -200}} animate={{x:0}}>{t('greet')} <span>Jo Fay.</span></motion.h2>
                 <h2>Frontend {t('dev')}</h2>
                 <h2> <span>Middle+</span> </h2>
               </div>
@@ -25,11 +26,11 @@ const LandingPage = () => {
               <div className={styles.landing__cont__left__icons}>
                 {
                   socials.map((Social, i) => (
-                    <div key={i}>
-                      <a href={Social.path} target='_blank'>
+              
+                      <a key={i}  href={Social.path} target='_blank'>
                         <Social.icon/>
                       </a>
-                    </div>
+                
                   ))
                 }
               </div>

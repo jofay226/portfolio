@@ -1,6 +1,7 @@
 .skill{
     background-color: black;
     margin-top: 30px;
+    overflow: hidden;
 
     &__cont{
         & > h1 {
@@ -24,6 +25,7 @@
 }
 
 .skills{
+
 
     margin-top: 100px;
     margin-bottom: 50px;

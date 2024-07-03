@@ -1,10 +1,9 @@
 .project{
-    border:1px solid white;
+    border:3px solid white;
     border-radius: 5px;
-    display: flex;
-    gap: 20px;
     overflow: hidden;
-    height: 300px;
+
+
 
     &:hover{
         background-color: #27272A;
@@ -14,19 +13,8 @@
             object-fit: cover;
         }
     }
-    &:nth-child(even){
-        flex-direction: row-reverse;
-        @media(max-width:580px){
-            flex-direction: column;
-        }
-    }
-    @media(max-width:580px){
-        flex-direction: column;
-        height: auto;
-    }
+
     &__left{
-        flex-grow: 1;
-        flex-basis: 50%;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -36,7 +24,7 @@
 
         & > img{
             width: 100%;
-            height: 100%;
+            height: 150px;
             object-fit: cover;
             transition: all 0.3s;
     
@@ -45,17 +33,13 @@
     }
 
     &__right{
-        flex-grow: 1;
-        flex-basis: 50%;
-        padding: 10px;
+        padding: 15px;
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
         gap: 20px;
-        & >h2 {
-            font-size: clamp(1.75rem, 0.778rem + 2.78vw, 3rem);
-        }
+
 
         & > h3{
             font-size: clamp(1.25rem, 0.667rem + 1.67vw, 2rem);
@@ -63,6 +47,8 @@
         & > p{
             font-size: 16px;
             color: #71717A;
+            margin-top: auto;
+    
         }
     }
 }

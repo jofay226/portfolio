@@ -15,6 +15,8 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
+import BurgerMenuOverlay from '../BurgerMenuOverlay/BurgerMenuOverlay';
+
 
 
 
@@ -60,7 +62,7 @@ const Navigaton = () => {
                         <Link to={`/${btn.path}`}>{btn.name}</Link>
                     </li>
                 ))}
-                <a  download={'jofayCV.pdf'} href="../../assets/images/jofayCV.pdf" target='_blank' >
+                <a href="../../assets/images/resume.pdf" download="resume.pdf"  target='_blank' >
                     <span>{t('navResume')}</span>
                     <img src={downloadIcon} alt="" />
                 </a>
@@ -70,11 +72,12 @@ const Navigaton = () => {
                 <CustomSelect/>
             </div>
             <div className={styles.nav__burger} onClick={() => setBurgerMenuModal(prev => !prev)}>
-                {burgerMenuModal ? <ClearIcon/> : <MenuIcon/>}
+                <MenuIcon/>
             </div>
             <AnimatePresence>
                 {burgerMenuModal && <BugerMenuModal burgerMenuModalHandler={burgerMenuModalHandler}/>}
             </AnimatePresence>
+            {burgerMenuModal && <BurgerMenuOverlay burgerMenuModalHandler={burgerMenuModalHandler}/>}
         </nav>
     </Container>
   )

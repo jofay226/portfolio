@@ -44,20 +44,25 @@
            
                 display: flex;
                 gap: 25px;
-                margin-top: 20px;
+                margin-top: 5px;
                 margin-top: auto;
-                & > div {
+                & > a {
                     border: 2px solid black;
                     border-radius: 5px;
-                    padding: 5px;
+                    padding: 10px;
                     transition: all 0.3s;
-                    // width: 70px;
-                    // height: 70px;
+                    display: grid;
+                    place-items: center;
+                    & > svg{
+                        width: 30px;
+                        height: 30px;
+                    }
                     &:hover{
                         cursor: pointer;
                         background-color: black;
-                        & > a > svg{
+                        & > svg{
                             color: white;
+              
                         }
                     }
         
