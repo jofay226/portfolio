@@ -22,7 +22,7 @@ const LandingPage = () => {
                 <h2>Frontend {t('dev')}</h2>
                 <h2> <span>Middle+</span> </h2>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt blanditiis deserunt saepe nemo ipsam repellendus officiis error illum suscipit laboriosam quas, est possimus quod aspernatur nostrum quasi impedit sint dolorem!</p>
+              <p>{t('about')}</p>
               <div className={styles.landing__cont__left__icons}>
                 {
                   socials.map((Social, i) => (

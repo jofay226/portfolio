@@ -1,0 +1,14 @@
+{
+    "name": "Sizning ismingiz",
+    "email": "Elektron pochta",
+    "textarea": "Qanday yordam bera olaman?",
+    "sendbtn": "Yuborish",
+    "talk": "Keling, maxsus narsa haqida gaplashaylik",
+    "seek": "Men qiziqarli, foydalanuvchilarga qulay va unutilmas interaktiv tajribalarni yaratish uchun ijodkorlik chegaralarini oshirishga intilaman.",
+    "nameerr": "Iltimos Ismingizni yozing",
+    "emailerr": "Noto'g'ri elektron pochta manzili",
+    "textareaerr": "Iltimos, menga xabar yuboring",
+    "great": "Ajoyib!",
+    "sent": "Sizning xabaringiz yuborildi.",
+    "back": "Tezda siz bn aloqaga chiqamiz."
+}

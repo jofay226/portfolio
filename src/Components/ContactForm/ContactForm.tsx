@@ -16,14 +16,16 @@ import useCheckErr from '../../hooks/useCheckErr';
 import emailjs from '@emailjs/browser';
 import Modal from '../Modal/Modal';
 import Overlay from '../Overlay/Overlay';
+import { useTranslation } from 'react-i18next';
 
 
 const socials: {icon:ElementType, path: string}[] = [{icon:InstagramIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:LinkedInIcon, path:'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:FacebookIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}, {icon:XIcon, path: 'https://www.linkedin.com/in/javokhir-fayzullaev-376240127/'}]
 
 const ContactForm = () => {
+    const {t} = useTranslation(["contactPage"])
     const [loading, setLoading] = useState(false)
     const [showModal, setShowModal] = useState(false)
-    const formRef = useRef<HTMLFormElement | null >(null)
+    const formRef = useRef<any>()
     const [message, setMessage] = useState({
       name: '',
       email: '',
@@ -41,12 +43,14 @@ const ContactForm = () => {
       setSubmitted(true)
       setMessageErr(useCheckErr(message))
     }
-  
+    
+
+    
     const sendEmail = async () => {
         try{
             setLoading(true)
-            await  emailjs.sendForm("service_4drd4vj", "template_h07ip7l", formRef?.current, {
-                publicKey: "JxkmkV_cimcojmK0o"
+            await  emailjs.sendForm( import.meta.env.VITE_SERIVCE_ID, import.meta.env.VITE_TEMPLATE_ID, formRef?.current, {
+                publicKey: import.meta.env.VITE_PUBLIC_KEY
             })
 
         } catch(e) {
@@ -83,20 +87,20 @@ const ContactForm = () => {
     <>
         <form ref={formRef} className={styles.contactform}>
             <div className={styles.contactform__inputcont}>
-                <input value={message.name} className={messageErr.name? styles.nameerr : ''} onChange={inputHandler} name='name' type="text" placeholder='Your Name' />
+                <input value={message.name} className={messageErr.name? styles.nameerr : ''} onChange={inputHandler} name='name' type="text" placeholder={t("name")} />
                 {messageErr.name && <span>{messageErr.name}</span>}
             </div>
             <div className={styles.contactform__inputcont}>
-                <input value={message.email}  className={messageErr.email? styles.emailerr : ''} onChange={inputHandler} name='email' type="text" placeholder='Email' />
+                <input value={message.email}  className={messageErr.email? styles.emailerr : ''} onChange={inputHandler} name='email' type="text" placeholder={t("email")} />
                 {messageErr.email && <span>{messageErr.email}</span>}
             </div>
             <div className={styles.contactform__inputcont}>
-                <textarea value={message.message} className={messageErr.message? styles.messageerr : ''} onChange={inputHandler} name="message" id="" placeholder='How can i help?'></textarea>
+                <textarea value={message.message} className={messageErr.message? styles.messageerr : ''} onChange={inputHandler} name="message" id="" placeholder={t("textarea")}></textarea>
                 {messageErr.message && <span>{messageErr.message}</span>}
             </div>
             <div className={styles.contactform__socialcont} >
             
-                {loading ? <Box sx={{ display: 'flex' }}><CircularProgress /></Box> : <button type='button' onClick={submitHandler}>Send</button> }
+                {loading ? <Box sx={{ display: 'flex' }}><CircularProgress /></Box> : <button type='button' onClick={submitHandler}>{t("sendbtn")}</button> }
                 <div >
                     {
                         socials.map((Social, i) => (

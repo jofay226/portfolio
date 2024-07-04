@@ -109,18 +109,34 @@
 
         }
     }
-
-    &__burger{
-        display: none;    
-        & > svg{
-            font-size: 40px;
-            &:hover{
-                cursor: pointer;
-            }
-        }
+    &__burgerlang{
+        display: none;
         @media(max-width: 560px ) {
             display: block;
+            display: flex;
+            gap: 10px;
+        }
+        &__lang{
+
+            position: relative;
+
+            & > svg{
+                font-size: 40px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__burger{
+            & > svg{
+                font-size: 40px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
         }
     }
+
 }
 

@@ -29,8 +29,8 @@ const BugerMenuModal: FC<BurgerMenuModalProps> = ({burgerMenuModalHandler}) => {
         </div>
         <div className={styles.burgermenu__pages}>
             {
-                pages.map( page => (
-                    <Link to={`/${page.path}`} onClick={burgerMenuModalHandler}>
+                pages.map( (page, i) => (
+                    <Link key={i}  to={`/${page.path}`} onClick={burgerMenuModalHandler}>
                         <page.Icon/>
                         <span>{page.name}</span>
                     </Link>

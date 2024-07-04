@@ -7,14 +7,15 @@ import {motion} from 'framer-motion'
 
 
 const ContactPage = () => {
+  const {t} = useTranslation(["contactPage"])
   return (
     <div className={styles.contactpage}>
       <Container>
         <div className={styles.contact}>
             <ContactForm/>
             <div className={styles.contact__right}>
-                <motion.h1 initial={{x: 200}} animate={{x:0}}>Let's Talk for Something special</motion.h1>
-                <p>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
+                <motion.h1 initial={{x: 200}} animate={{x:0}}>{t('talk')}</motion.h1>
+                <p>{t('seek')}</p>
                 <h3>jofay91@gmail.com</h3>
                 <h3>+998(90) 021-22-26 </h3>
             </div>

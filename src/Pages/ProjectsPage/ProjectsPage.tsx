@@ -39,9 +39,9 @@ const ProjectsPage = () => {
             </motion.div>
             <div  className={styles.about__cont__right}>
               <h1>{t("about")} <span>{t("me")}</span></h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente accusantium iusto aliquam fugit qui totam praesentium dignissimos culpa, saepe soluta maiores sunt excepturi itaque, nam suscipit minus porro illum laboriosam?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti modi, neque et ipsam explicabo doloribus iure laborum sapiente soluta voluptatem reprehenderit ipsa? Similique delectus eaque iure quidem dignissimos sint repellat?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cumque sequi harum. Vitae doloribus perspiciatis odit, aut id atque, voluptate, laboriosam iusto eos unde consectetur alias dolorum. Fugiat, dolore adipisci!</p>
+              <p>{t("aboutme1")}</p>
+              <p>{t("aboutme2")}</p>
+              <p>{t("aboutme3")}</p>
             </div>
           </div>
         </Container>

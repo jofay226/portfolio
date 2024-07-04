@@ -16,6 +16,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import BurgerMenuOverlay from '../BurgerMenuOverlay/BurgerMenuOverlay';
+import LocaleModal from '../LocaleModal/LocaleModal';
+import LocaleOverlay from '../LocaleOverlay/LocaleOverlay';
 
 
 
@@ -25,6 +27,7 @@ const Navigaton = () => {
     const btns = [{path: 'skills', name: t('navSkills')}, { path: 'projects', name: t('navProjects')}, { path: 'contact', name: t('navContact')}]
     const [activeBtn, setActiveBtn] = useState({path: '', name: ''});
     const [burgerMenuModal, setBurgerMenuModal] = useState<boolean>(false)
+    const [localeModal, setLocaleModal] = useState(false)
     const navigate = useNavigate()
     
     const logoClickHandler = () => {
@@ -32,8 +35,15 @@ const Navigaton = () => {
         navigate('/')
     }
 
-    const burgerMenuModalHandler = () => {
+    const burgerMenuModalHandler = () => {        
         setBurgerMenuModal(false)
+    }
+
+    const localeModalHandler = () => {
+        setLocaleModal(prev => !prev)
+    }
+    const closeLocaleHandler = () => {
+        setLocaleModal(false)
     }
 
     useEffect(() => {   
@@ -62,7 +72,7 @@ const Navigaton = () => {
                         <Link to={`/${btn.path}`}>{btn.name}</Link>
                     </li>
                 ))}
-                <a href="../../assets/images/resume.pdf" download="resume.pdf"  target='_blank' >
+                <a href="../../../public/resume.pdf" download="resume.pdf"  target='_blank' >
                     <span>{t('navResume')}</span>
                     <img src={downloadIcon} alt="" />
                 </a>
@@ -71,12 +81,18 @@ const Navigaton = () => {
                 <LanguageIcon/>
                 <CustomSelect/>
             </div>
-            <div className={styles.nav__burger} onClick={() => setBurgerMenuModal(prev => !prev)}>
-                <MenuIcon/>
+            <div className={styles.nav__burgerlang}>
+                <div className={styles.nav__burgerlang__lang}>
+                    <LanguageIcon onClick={localeModalHandler}/>
+                    {localeModal && <LocaleModal closeLocaleHandler={closeLocaleHandler}/>}
+                    {localeModal && <LocaleOverlay closeLocaleHandler={closeLocaleHandler}/>}
+                </div>
+                <div className={styles.nav__burgerlang__burger} onClick={() => setBurgerMenuModal(prev => !prev)}>
+                    <MenuIcon/>
+                </div>
             </div>
-            <AnimatePresence>
-                {burgerMenuModal && <BugerMenuModal burgerMenuModalHandler={burgerMenuModalHandler}/>}
-            </AnimatePresence>
+            {burgerMenuModal && <AnimatePresence><BugerMenuModal burgerMenuModalHandler={burgerMenuModalHandler}/></AnimatePresence> }
+  
             {burgerMenuModal && <BurgerMenuOverlay burgerMenuModalHandler={burgerMenuModalHandler}/>}
         </nav>
     </Container>

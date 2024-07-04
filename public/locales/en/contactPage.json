@@ -1,0 +1,14 @@
+{
+    "name": "Your Name",
+    "email": "Email",
+    "textarea": "How can i help?",
+    "sendbtn": "Send",
+    "talk": "Let's Talk for Something special",
+    "seek": "I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.",
+    "nameerr": "Tell me your name",
+    "emailerr": "Invalid email address",
+    "textareaerr": "Please send me a message",
+    "great": "Great!",
+    "sent": "Your message has been sent.",
+    "back": "I will get back asap."
+}

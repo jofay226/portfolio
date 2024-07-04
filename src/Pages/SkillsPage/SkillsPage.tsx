@@ -13,10 +13,10 @@ import ExpBox from '../../Components/ExpBox/ExpBox';
 import {socket, figma, css, git, github, html, js, next, postman, react,redux,sass, auth} from '../../assets/images'; 
 import { useTranslation } from 'react-i18next';
 const prevJobs = [
-  {id: 1, Logo: OtherHousesIcon, name: 'Roomster', date: 'Jan 2019-Jan 2021', role:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque quam esse, libero consectetur laboriosam quis temporibus, nemo veniam unde excepturi impedit! Nobis magnam qui unde obcaecati perspiciatis odit fugiat!'},
-  {id: 2, Logo: RestaurantIcon, name: 'Tie Aprons', date: 'Feb 2021-Nov 2022', role:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque quam esse, libero consectetur laboriosam quis temporibus, nemo veniam unde excepturi impedit! Nobis magnam qui unde obcaecati perspiciatis odit fugiat!'},
-  {id: 3, Logo: PrecisionManufacturingIcon, name: 'Napa Automative', date: 'Jan 2023-Aug 2023', role:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque quam esse, libero consectetur laboriosam quis temporibus, nemo veniam unde excepturi impedit! Nobis magnam qui unde obcaecati perspiciatis odit fugiat!'},
-  {id: 4, Logo: AutoStoriesIcon, name: 'It Academy', date: 'Sep 2023-Aug 2024', role:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque quam esse, libero consectetur laboriosam quis temporibus, nemo veniam unde excepturi impedit! Nobis magnam qui unde obcaecati perspiciatis odit fugiat!'},
+  {id: 1, Logo: OtherHousesIcon, name: 'Roomster', date: 'Jan 2019-Jan 2021', role:'This is my first job in the IT field. I started working as an intern in this copmany. I have learned a lot of things.'},
+  {id: 2, Logo: RestaurantIcon, name: 'Tie Aprons', date: 'Feb 2021-Nov 2022', role:'Big step in my career, Tie aprons was a start up project, with team we build this applicaton from zero. hardest part was authorizarion, and chat. '},
+  {id: 3, Logo: PrecisionManufacturingIcon, name: 'Napa Automative', date: 'Jan 2023-Aug 2023', role:'this company hired me as a middle frontend developer, we build different applications, use different libraries. it was amazing expirience. '},
+  {id: 4, Logo: AutoStoriesIcon, name: 'It Academy', date: 'Sep 2023-Aug 2024', role:'In "IT Academy" i worked as developer and at the same time as mentor. i had  approximately 100 students.'},
 ]
 
 const mySkills = [
