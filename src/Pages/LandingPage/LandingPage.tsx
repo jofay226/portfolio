@@ -42,7 +42,10 @@ const LandingPage = () => {
         />
         <link rel="canonical" href="https://jofay.uz/" />
         <meta property="og:title" content="portfolio website" />
-        <meta property="og:url" content="http://localhost:5173" />
+        <meta
+          property="og:url"
+          content="https://portfolio-ra4ehfjb8-jofay226s-projects.vercel.app/"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
         <meta
