@@ -9,7 +9,6 @@ import { ElementType } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import logo from "../../assets/images/logo.svg";
 
 const socials: { icon: ElementType; path: string }[] = [
   {
