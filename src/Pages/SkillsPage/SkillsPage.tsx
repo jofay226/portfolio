@@ -1,7 +1,6 @@
 import Container from "../../Utils/Container/Container";
 import styles from "./SkillsPage.module.scss";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
 // mui icons
 import OtherHousesIcon from "@mui/icons-material/OtherHouses";
 import RestaurantIcon from "@mui/icons-material/Restaurant";

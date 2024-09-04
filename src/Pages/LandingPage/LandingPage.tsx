@@ -8,9 +8,6 @@ import XIcon from "@mui/icons-material/X";
 import { ElementType } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
-import { logo } from "../../assets/images";
-import { useLocation } from "react-router-dom";
 import Seo from "../../Components/SEO/Seo";
 
 const socials: { icon: ElementType; path: string }[] = [
