@@ -41,17 +41,17 @@ const LandingPage = () => {
           content="who am i, experience that i have, mindset"
         />
         <link rel="canonical" href="https://jofay.uz/" />
-        <meta property="og:title" content="portfolio website" />
+        {/* <meta property="og:title" content="JoFaY's Portfolio" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://portfolio-ra4ehfjb8-jofay226s-projects.vercel.app/"
         />
-        <meta property="og:type" content="website" />
         <meta property="og:image" content={logo} />
         <meta
           property="og:description"
-          content="This website have all information about me"
-        />
+          content="here you can find all information about me..."
+        /> */}
       </Helmet>
       <Container>
         <div className={styles.landing__cont}>
