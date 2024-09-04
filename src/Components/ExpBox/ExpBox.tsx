@@ -1,8 +1,8 @@
-import { FC, ReactElement } from 'react'
+import { FC } from 'react'
 import styles from './ExpBox.module.scss'
 
 
-const ExpBox:FC<{id: number, img: string, name: string}> = ({img, name, id}) => {
+const ExpBox:FC<{id?: number, img: string, name: string}> = ({img, name}) => {
 
   
   return (

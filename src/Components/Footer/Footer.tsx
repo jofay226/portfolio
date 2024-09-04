@@ -1,6 +1,6 @@
 import Container from '../../Utils/Container/Container'
 import styles from './Footer.module.scss'
-import { mainLogoIcon, logo } from '../../assets/images'
+import { logo } from '../../assets/images'
 const Footer = () => {
   return (
     <div className={styles.footer}>

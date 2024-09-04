@@ -1,7 +1,6 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import styles from './BurgerMenuModal.module.scss'
 import {motion} from 'framer-motion'
-const btns = ['EN', "RU", "UZ"]
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -16,8 +15,7 @@ type BurgerMenuModalProps = {
 }
 
 const BugerMenuModal: FC<BurgerMenuModalProps> = ({burgerMenuModalHandler}) => {
-    const [active, setActive] = useState('')
-    const {i18n, t} = useTranslation();
+    const { t} = useTranslation();
     const pages = [{path: 'skills', name: t('navSkills'), Icon: SchoolIcon}, { path: 'projects', name: t('navProjects'), Icon: AccountTreeIcon}, { path: 'contact', name: t('navContact'), Icon: ContactPhoneIcon}]
 
 

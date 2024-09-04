@@ -1,5 +1,4 @@
 export {default as downloadIcon} from './download.svg';
-export {default as mainLogoIcon} from './mainlogo.svg';
 export {default as banner} from './Banner.svg';
 export {default as logo} from './logo.svg'
 
@@ -17,6 +16,11 @@ export {default as react} from './skills/react-original.png'
 export {default as redux} from './skills/redux-original.png'
 export {default as sass} from './skills/sass-original.png'
 export {default as auth} from './skills/security-lock.png'
+
+
+
+
+// 
 export {default as aboutme} from './aboutme.svg'
 export {default as plantstore} from './plantstore.jpeg'
 export {default as burgerstore} from './burgerstore.jpeg'

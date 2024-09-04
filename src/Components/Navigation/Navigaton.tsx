@@ -4,12 +4,11 @@ import Container from '../../Utils/Container/Container';
 import BugerMenuModal from '../BurgerMenuModal/BugerMenuModal';
 
 // images
-import { mainLogoIcon, downloadIcon, logo } from '../../assets/images';
+import {  downloadIcon, logo } from '../../assets/images';
 
 // icons from mui
 import LanguageIcon from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
-import ClearIcon from '@mui/icons-material/Clear';
 import CustomSelect from '../../Utils/CustomSelect';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -72,7 +71,7 @@ const Navigaton = () => {
                         <Link to={`/${btn.path}`}>{btn.name}</Link>
                     </li>
                 ))}
-                <a href="../../../public/resume.pdf" download="resume.pdf"  target='_blank' >
+                <a href="/resume.pdf" download="resume.pdf"  target='_blank' >
                     <span>{t('navResume')}</span>
                     <img src={downloadIcon} alt="" />
                 </a>
