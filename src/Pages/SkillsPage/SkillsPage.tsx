@@ -27,6 +27,7 @@ import {
   auth,
 } from "../../assets/images";
 import { useTranslation } from "react-i18next";
+import Seo from "../../Components/SEO/Seo";
 const prevJobs = [
   {
     id: 1,
@@ -79,14 +80,11 @@ const SkillsPage = () => {
   const { t } = useTranslation(["skillsPage"]);
   return (
     <div>
-      <Helmet>
-        <title>My Skills</title>
-        <meta
-          name="description"
-          content="list of my skills, and my experience, companies that i worked for "
-        />
-        <link rel="canonical" href="https://jofay.uz/skills" />
-      </Helmet>
+      <Seo
+        title={"Skills"}
+        desc={"Who I am, My experience, mindset"}
+        canonical={"http://localhost:5173"}
+      />
       <div className={styles.skill}>
         <Container>
           <div className={styles.skill__cont}>

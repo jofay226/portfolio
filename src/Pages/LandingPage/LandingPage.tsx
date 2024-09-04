@@ -9,6 +9,9 @@ import { ElementType } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { logo } from "../../assets/images";
+import { useLocation } from "react-router-dom";
+import Seo from "../../Components/SEO/Seo";
 
 const socials: { icon: ElementType; path: string }[] = [
   {
@@ -31,27 +34,16 @@ const socials: { icon: ElementType; path: string }[] = [
 
 const LandingPage = () => {
   const { t } = useTranslation();
+
+  console.log(window.location.href);
+
   return (
     <section className={styles.landing}>
-      <Helmet>
-        <title>About Me</title>
-        <meta
-          name="description"
-          content="who am i, experience that i have, mindset"
-        />
-        <link rel="canonical" href="https://jofay.uz/" />
-        {/* <meta property="og:title" content="JoFaY's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://portfolio-ra4ehfjb8-jofay226s-projects.vercel.app/"
-        />
-        <meta property="og:image" content={logo} />
-        <meta
-          property="og:description"
-          content="here you can find all information about me..."
-        /> */}
-      </Helmet>
+      <Seo
+        title={"About Me"}
+        desc={"Who I am, My experience, mindset"}
+        canonical={"http://localhost:5173"}
+      />
       <Container>
         <div className={styles.landing__cont}>
           <div className={styles.landing__cont__left}>
